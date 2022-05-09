@@ -1,7 +1,7 @@
 // ==UserScript==
 // @name Github Monkey
 // @namespace Uplusware
-// @version 0.1
+// @version 0.2
 // @description Github Monkey offers the better UI/UE for Github.
 // @author Uplusware
 // @homepageURL https://github.com/uplusware/github_monkey
@@ -216,7 +216,7 @@ $(function () {
                         });
                         if(selected_count == 2){
                             var repo_url = $(this).parent().find('div.BtnGroup > a').attr('href').split('/', 3);
-                            var diff_url = "/" + repo_url[1] + "/" + repo_url[2] + "/compare/" + diff_alpha + "..." + diff_beta;
+                            var diff_url = "/" + repo_url[1] + "/" + repo_url[2] + "/compare/" + diff_beta + "..." + diff_alpha;
                             window.open(diff_url, "_blank");
                         }
                         else if(selected_count > 2){
