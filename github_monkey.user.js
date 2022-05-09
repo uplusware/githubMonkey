@@ -4,12 +4,12 @@
 // @version 0.2
 // @description Github Monkey offers the better UI/UE for Github.
 // @author Uplusware
-// @homepageURL https://github.com/uplusware/github_monkey
+// @homepageURL https://github.com/uplusware/githubMonkey
 // @include https://github.com*
 // @require https://cdn.bootcdn.net/ajax/libs/jquery/3.6.0/jquery.min.js
 // @require https://cdn.bootcdn.net/ajax/libs/jqueryui/1.12.1/jquery-ui.min.js
-// @downloadURL https://github.com/uplusware/github_monkey/raw/main/github_monkey.user.js
-// @updateURL https://github.com/uplusware/github_monkey/raw/main/github_monkey.user.js
+// @downloadURL https://github.com/uplusware/githubMonkey/raw/main/github_monkey.user.js
+// @updateURL https://github.com/uplusware/githubMonkey/raw/main/github_monkey.user.js
 // @grant GM_openInTab
 // ==/UserScript==
 'use strict';
@@ -23,7 +23,7 @@ $(function () {
         console.log("          If it leads to web performance issue after apply this script,");
         console.log("          please increase the value of(var CONFIG_GITHUB_MONKEY_INTERVAL = 1000) to a greater one,");
         console.log("          such as 2000(var CONFIG_GITHUB_MONKEY_INTERVAL = 1000).");
-        console.log("* Tips 2: More infor please refer to https://github.com/uplusware/github_monkey");
+        console.log("* Tips 2: More infor please refer to https://github.com/uplusware/githubMonkey");
         console.log("-----------------------------------------------------------------------------------------------------------------------");
         var CONFIG_GITHUB_MONKEY_INTERVAL = 1000;
 
@@ -34,16 +34,16 @@ $(function () {
             }
 
             $($('div.Box-header > div > div.BtnGroup')[$('div.Box-header > div > div.BtnGroup').length - 1]).each(function(){
-                if($(this).attr('github_monkey_says_hell0_html_tag') != 'true'){
-                    $(this).attr('github_monkey_says_hell0_html_tag', 'true');
+                if($(this).attr('githubmonkeysayshell0elementvisited') != 'true'){
+                    $(this).attr('githubmonkeysayshell0elementvisited', 'true');
                     $('<button name="full_screen_viewer" type="button" class="btn btn-sm BtnGroup-item" FULL_SCREEN="false">Full Screen</button>').appendTo($(this));
                     return false;
                 }
             });
 
             $('[name="full_screen_viewer"]').each(function(){
-                if($(this).attr('github_monkey_says_hell0_html_tag') != 'true'){
-                    $(this).attr('github_monkey_says_hell0_html_tag', 'true');
+                if($(this).attr('githubmonkeysayshell0elementvisited') != 'true'){
+                    $(this).attr('githubmonkeysayshell0elementvisited', 'true');
                     $(this).click(function(){
                         if($(this).attr('FULL_SCREEN') == "false"){
                             if($(this).attr('OLD_Z_INDEX') == undefined){
@@ -75,16 +75,16 @@ $(function () {
             });
 
             $($('div.js-code-editor > div.file-header > div.file-actions')[$('div.js-code-editor > div.file-header > div.file-actions').length - 1]).each(function(){
-                if($(this).attr('github_monkey_says_hell0_html_tag') != 'true'){
-                    $(this).attr('github_monkey_says_hell0_html_tag', 'true');
+                if($(this).attr('githubmonkeysayshell0elementvisited') != 'true'){
+                    $(this).attr('githubmonkeysayshell0elementvisited', 'true');
                     $('<button name="full_screen_editor" type="button" class="btn btn-sm" FULL_SCREEN="false">Full Screen</button>').appendTo($(this));
                     return false;
                 }
             });
 
             $('[name="full_screen_editor"]').each(function(){
-                if($(this).attr('github_monkey_says_hell0_html_tag') != 'true'){
-                    $(this).attr('github_monkey_says_hell0_html_tag', 'true');
+                if($(this).attr('githubmonkeysayshell0elementvisited') != 'true'){
+                    $(this).attr('githubmonkeysayshell0elementvisited', 'true');
                     $(this).click(function(){
                         if($(this).attr('FULL_SCREEN') == "false"){
                             if($(this).attr('OLD_Z_INDEX') == undefined){
@@ -117,8 +117,8 @@ $(function () {
                 }
             });
 
-            if($("#partial-new-comment-form-actions").attr('github_monkey_says_hell0_html_tag') != 'true'){
-                $("#partial-new-comment-form-actions").attr('github_monkey_says_hell0_html_tag', 'true');
+            if($("#partial-new-comment-form-actions").attr('githubmonkeysayshell0elementvisited') != 'true'){
+                $("#partial-new-comment-form-actions").attr('githubmonkeysayshell0elementvisited', 'true');
 
                 let helper_button = '<div class="bg-gray-light ml-1"><button type="submit" class="btn" id="HELPER_LGTM" title="Looks good to me"><img width="16" height="16" alt="Looks good to me" title="LGTM" src="data:image/svg+xml;base64,PHN2ZyB3aWR0aD0iOTYiIGhlaWdodD0iOTYiIHhtbG5zPSJodHRwOi8vd3d3LnczLm9yZy8yMDAwL3N2ZyI+CgogPGc+CiAgPHRpdGxlPmJhY2tncm91bmQ8L3RpdGxlPgogIDxyZWN0IGZpbGw9Im5vbmUiIGlkPSJjYW52YXNfYmFja2dyb3VuZCIgaGVpZ2h0PSI0MDIiIHdpZHRoPSI1ODIiIHk9Ii0xIiB4PSItMSIvPgogPC9nPgogPGc+CiAgPHRpdGxlPkxheWVyIDE8L3RpdGxlPgogIDxwYXRoIGlkPSJzdmdfMSIgZmlsbD0iIzAwYmY1ZiIgZD0ibTI5LjQzNiwzMS4wMDAwMDFsLTIxLjk2OCwwYy0zLjg2OCwwIC03LjAxNiwzLjE0NCAtNy4wMTYsNy4wMTJsMCw0MS45NzZjMCwzLjg2OCAzLjE0OCw3LjAxMiA3LjAxNiw3LjAxMmwyMS45NjgsMGMzLjg2OCwwIDcuMDE2LC0zLjE0NCA3LjAxNiwtNy4wMTJsMCwtNDEuOTc2YzAsLTMuODY0IC0zLjE0OCwtNy4wMTIgLTcuMDE2LC03LjAxMnoiLz4KICA8cGF0aCBpZD0ic3ZnXzIiIGZpbGw9IiMwMGJmNWYiIGQ9Im05NS41NDgsNDQuMTQ0YzAsLTYuMzUyIC04LjUyNCwtMTAuMjEyIC0xMi4yNjQsLTEwLjIxMmwtMTYuODU2LDBjMi44NiwtMTIuNDYgLTAuNTk2LC0xOS41NzIgLTMuMDI4LC0yMi43ODhjLTIuNDA4LC0zLjE4IC01LjcyOCwtNS4wOCAtOC44ODQsLTUuMDhjLTIuNDUyLDAgLTQuNTY0LDEuMTU2IC01Ljc3MiwzLjE4NGMtMC4xODQsMC4zMDggLTAuMjg0LDAuNjY4IC0wLjI4NCwxLjAyOGwwLDEwLjc0NGMtMi40Miw2Ljk4NCAtNC43ODQsMTIuNDQ0IC04LDE2LjU4bDAsNDcuOTE2YzAuNzU2LDAuMjUyIDEuNDg0LDAuNDI0IDIuMDgsMC40MjRsMzYuOTA4LDBjMS43MzYsMCAzLjQyNCwtMC45MDQgNC45MTYsLTIuNTk2YzIuMDY0LC0yLjM2OCAzLjQ0NCwtNi4wMTYgMy40OTYsLTkuMDA4YzIuOTkyLC0yLjI0OCA0LjQxNiwtNi4zNTIgNC4xNTIsLTEyYzMuMjIsLTMuMzQ0IDMuMDIsLTguMDkyIDEuOTcyLC0xMS4wMjRjMS4zMTYsLTEuODggMS41NjQsLTUuMDY4IDEuNTY0LC03LjE2OHoiLz4KIDwvZz4KPC9zdmc+" /> LGTM</button></div>';
                 $("#partial-new-comment-form-actions").children().html($("#partial-new-comment-form-actions").children().html() + helper_button);
@@ -133,8 +133,8 @@ $(function () {
                 });
             }
 
-            if($('nav > ul.UnderlineNav-body').attr('github_monkey_says_hell0_html_tag') != 'true'){
-                $('nav > ul.UnderlineNav-body').attr('github_monkey_says_hell0_html_tag', 'true');
+            if($('nav > ul.UnderlineNav-body').attr('githubmonkeysayshell0elementvisited') != 'true'){
+                $('nav > ul.UnderlineNav-body').attr('githubmonkeysayshell0elementvisited', 'true');
                 $('nav > ul.UnderlineNav-body > li > a.UnderlineNav-item').each(function(){
                     let m1 = $(this).attr("href").match(/\/pulls$/g);
                     if(m1 && m1.length > 0){
@@ -170,8 +170,8 @@ $(function () {
             }
 
             $(".d-block.comment-body.markdown-body.js-comment-body").each(function(){
-                if($(this).attr('github_monkey_says_hell0_html_tag') != 'true'){
-                    $(this).attr('github_monkey_says_hell0_html_tag', 'true');
+                if($(this).attr('githubmonkeysayshell0elementvisited') != 'true'){
+                    $(this).attr('githubmonkeysayshell0elementvisited', 'true');
                     console.log($(this).children("p").html())
                     if($(this).children("p") && $(this).children("p").html()) {
                         let match1 = $(this).children("p").html().match(/((?<=[\s\>\.,])|(^))[Ll][Gg][Tt][Mm]((?=[\s\<\.,])|($))/g);
@@ -183,22 +183,22 @@ $(function () {
             });
 
 			$('li.js-commits-list-item > div > div.BtnGroup > clipboard-copy').each(function(){
-                if($(this).attr('github_monkey_says_hell0_html_tag') != 'true'){
-                    $(this).attr('github_monkey_says_hell0_html_tag', 'true');
+                if($(this).attr('githubmonkeysayshell0elementvisited') != 'true'){
+                    $(this).attr('githubmonkeysayshell0elementvisited', 'true');
                     $('<input class="mr-1 btn-outline tooltipped tooltipped-sw" type="checkbox" name="auto_diff_commits" value="' + $(this).val() + '" data-ga-click="commits diff, click, value:false" aria-label="Choose as the diff commit">').appendTo($(this).parent().parent())
                 }
             });
 
             $('li.js-commits-list-item > div > div.BtnGroup > button > clipboard-copy').each(function(){
-                if($(this).attr('github_monkey_says_hell0_html_tag') != 'true'){
-                    $(this).attr('github_monkey_says_hell0_html_tag', 'true');
+                if($(this).attr('githubmonkeysayshell0elementvisited') != 'true'){
+                    $(this).attr('githubmonkeysayshell0elementvisited', 'true');
                     $('<input class="mr-1 btn-outline tooltipped tooltipped-sw" type="checkbox" name="auto_diff_commits" value="' + $(this).val() + '" data-ga-click="commits diff, click, value:false" aria-label="Choose as the diff commit">').appendTo($(this).parent().parent().parent())
                 }
             });
 
             $('input[name="auto_diff_commits"]').each(function(){
-                if($(this).attr('github_monkey_says_hell0_html_tag') != 'true'){
-                    $(this).attr('github_monkey_says_hell0_html_tag', 'true');
+                if($(this).attr('githubmonkeysayshell0elementvisited') != 'true'){
+                    $(this).attr('githubmonkeysayshell0elementvisited', 'true');
                     $(this).click(function(){
                         var selected_count = 0;
                         var diff_alpha = ""
