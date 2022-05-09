@@ -8,8 +8,8 @@
 // @include https://github.com*
 // @require https://cdn.bootcdn.net/ajax/libs/jquery/3.6.0/jquery.min.js
 // @require https://cdn.bootcdn.net/ajax/libs/jqueryui/1.12.1/jquery-ui.min.js
-// @downloadURL https://raw.githubusercontent.com/uplusware/github_monkey/main/github_monkey.user.js
-// @updateURL https://raw.githubusercontent.com/uplusware/github_monkey/main/github_monkey.user.js
+// @downloadURL https://github.com/uplusware/github_monkey/raw/main/github_monkey.user.js
+// @updateURL https://github.com/uplusware/github_monkey/raw/main/github_monkey.user.js
 // @grant GM_openInTab
 // ==/UserScript==
 'use strict';
