@@ -216,7 +216,7 @@ $(function () {
                         });
                         if(selected_count == 2){
                             var repo_url = $(this).parent().find('div.BtnGroup > a').attr('href').split('/', 3);
-                            var diff_url = "/" + repo_url[1] + "/" + repo_url[2] + "/compare/" + diff_beta + "..." + diff_alpha;
+                            var diff_url = "/" + repo_url[1] + "/" + repo_url[2] + "/compare/" + diff_alpha + "..." + diff_beta;
                             window.open(diff_url, "_blank");
                         }
                         else if(selected_count > 2){
