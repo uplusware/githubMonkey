@@ -1,11 +1,11 @@
 // ==UserScript==
 // @name Github Monkey
 // @namespace Uplusware
-// @version 0.2
+// @version 0.3
 // @description Github Monkey offers the better UI/UE for Github.
 // @author Uplusware
 // @homepageURL https://github.com/uplusware/githubMonkey
-// @include https://github.com*
+// @match https://github.com/*
 // @require https://cdn.bootcdn.net/ajax/libs/jquery/3.6.0/jquery.min.js
 // @require https://cdn.bootcdn.net/ajax/libs/jqueryui/1.12.1/jquery-ui.min.js
 // @downloadURL https://github.com/uplusware/githubMonkey/raw/main/github_monkey.user.js
@@ -166,6 +166,14 @@ $(function () {
                         $(this).removeClass("selected");
                         $(this).removeAttr("aria-current");
                     }
+                });
+            }
+
+            let m6 = window.location.href.match(/\/pull\/[0-9]+$/g);
+            if(m6 && m6.length > 0){
+                $('nav > ul.UnderlineNav-body > li > a.UnderlineNav-item').each(function(){
+                     $(this).removeClass("selected");
+                     $(this).removeAttr("aria-current");
                 });
             }
 
