@@ -1,7 +1,7 @@
 // ==UserScript==
 // @name Github Monkey
 // @namespace Uplusware
-// @version 0.3
+// @version 0.4
 // @description Github Monkey offers the better UI/UE for Github.
 // @author Uplusware
 // @homepageURL https://github.com/uplusware/githubMonkey
